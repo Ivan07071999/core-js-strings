@@ -24,11 +24,6 @@ function getStringLength(value) {
   return 0;
 }
 
-// console.log(getStringLength('aaaaa'));
-// console.log(getStringLength());
-// console.log(getStringLength(null));
-// console.log(getStringLength(undefined));
-
 /**
  * Returns true if the value is a string, otherwise returns false.
  *
@@ -48,13 +43,6 @@ function isString(value) {
   return false;
 }
 
-// console.log(isString());
-// console.log(isString(null));
-// console.log(isString([]));
-// console.log(isString({}));
-// console.log(isString('test'));
-// console.log(isString(new String('test')));
-
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -71,10 +59,6 @@ function concatenateStrings(value1, value2) {
   return value1.concat(value2);
 }
 
-// console.log(concatenateStrings('aa', 'bb'));
-// console.log(concatenateStrings('aa', ''));
-// console.log(concatenateStrings('', 'bb'));
-
 /**
  * Returns the first character of the given string.
  *
@@ -90,7 +74,6 @@ function getFirstChar(value) {
   return value.charAt(0);
 }
 
-// console.log(getFirstChar('John Doe'));
 /**
  * Removes leading and trailing whitespace characters from the string.
  *
@@ -120,7 +103,7 @@ function removeLeadingAndTrailingWhitespaces(value) {
 function removeLeadingWhitespaces(value) {
   return value.trimStart();
 }
-// console.log(removeLeadingWhitespaces());
+
 /**
  * Removes only trailing whitespace characters from the string.
  *
@@ -154,10 +137,6 @@ function repeatString(str, times) {
   return '';
 }
 
-// console.log(repeatString('A', 5));
-// console.log(repeatString('cat', 3));
-// console.log(repeatString(', 3'));
-// console.log(repeatString('abs', -2));
 /**
  * Remove the first occurrence of a substring from a string.
  *
@@ -172,13 +151,8 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(str, value) {
   return str.replace(value, '');
-  // const firstIndex = str.indexOf(value);
-  // if (firstIndex === -1) {
-  //   return str;
-  // }
-  // return str.substring(0, firstIndex) + str.substring(firstIndex + value.length);
 }
-// console.log(removeFirstOccurrences('To be or not to be', 'be'));
+
 /**
  * Remove the last occurrence of a substring from a string.
  *
@@ -198,9 +172,7 @@ function removeLastOccurrences(str, value) {
   }
   return str.substring(0, lastIndex) + str.substring(lastIndex + value.length);
 }
-// console.log(removeLastOccurrences('To be or not to be', 'be'));
-// console.log(removeLastOccurrences('I like legends', 'end'));
-// console.log(removeLastOccurrences('ABABAB', 'BA'));
+
 /**
  * Calculate the sum of character codes of the given string.
  *
@@ -236,9 +208,6 @@ function startsWith(str, substr) {
   return false;
 }
 
-// console.log(startsWith('Hello World', 'World'));
-// console.log(startsWith('Hello World', 'Hello'));
-
 /**
  * Checks if a string ends with a specific substring.
  *
@@ -254,8 +223,6 @@ function endsWith(str, substr) {
   if (str.endsWith(substr)) return true;
   return false;
 }
-// console.log(endsWith('Hello World', 'World'));
-// console.log(endsWith('Hello World', 'Hello'));
 
 /**
  * Returns a time string in the "mm:ss" format.
@@ -276,10 +243,6 @@ function formatTime(minutes, seconds) {
   return `${formattedMinutes}:${formattedSeconds}`;
 }
 
-// console.log(formatTime(5, 30));
-// console.log(formatTime(1, 15));
-// console.log(formatTime(0, 45));
-
 /**
  * Returns a string in reverse order.
  *
@@ -293,9 +256,6 @@ function formatTime(minutes, seconds) {
 function reverseString(str) {
   return str.split('').reverse().join('');
 }
-
-// console.log(reverseString('abcdef'));
-// console.log(reverseString('12345'));
 
 /**
  * Returns a string with characters in alphabetical order.
@@ -311,10 +271,6 @@ function reverseString(str) {
 function orderAlphabetically(str) {
   return str.split('').sort().join('');
 }
-
-// console.log(orderAlphabetically('webmaster'));
-// console.log(orderAlphabetically('textbook'));
-// console.log(orderAlphabetically('abc123xyz'));
 
 /**
  * Checks if a given string contains a specified substring.
@@ -332,10 +288,6 @@ function containsSubstring(str, substring) {
   if (str.includes(substring)) return true;
   return false;
 }
-
-// console.log(containsSubstring('Hello, World!', 'World'));
-// console.log(containsSubstring('JavaScript is Fun', 'Python'));
-// console.log(containsSubstring('12345', '34'));
 
 /**
  * Returns the number of vowels in the string.
@@ -362,12 +314,6 @@ function countVowels(str) {
   return count;
 }
 
-// console.log(countVowels('apple'));
-// console.log(countVowels('banana'));
-// console.log(countVowels('cherry'));
-// console.log(countVowels('aEiOu'));
-// console.log(countVowels('XYZ'));
-
 /**
  * Returns true if the string is a palindrome; otherwise false.
  * https://en.wikipedia.org/wiki/Palindrome
@@ -387,13 +333,6 @@ function isPalindrome(str) {
   return false;
 }
 
-// console.log(isPalindrome('madam'));
-// console.log(isPalindrome('racecar'));
-// console.log(isPalindrome('apple'));
-// console.log(isPalindrome('No lemon, no melon'));
-// console.log(isPalindrome('Was it a car or a cat I saw?'));
-// console.log(isPalindrome('A man, a plan, a canal, Panama!'));
-
 /**
  * Find the longest word in the sentence. If there are multiple longest words,
  * the function returns the first one encountered.
@@ -411,10 +350,6 @@ function findLongestWord(sentence) {
   arr.sort((val1, val2) => val2.length - val1.length);
   return arr[0];
 }
-
-// console.log(findLongestWord('The quick brown fox'));
-// console.log(findLongestWord('A long and winding road'));
-// console.log(findLongestWord('No words here'));
 
 /**
  * Returns the string where each word is reversed.
@@ -434,8 +369,6 @@ function reverseWords(str) {
   }
   return result.join(' ');
 }
-
-// console.log(reverseWords('Hello World'));
 
 /**
  * Inverts the case of each character in the given string.
@@ -489,8 +422,6 @@ function getStringFromTemplate(firstName, lastName) {
 function extractNameFromTemplate(value) {
   return value.slice(7, -1);
 }
-
-// console.log(extractNameFromTemplate('Hello, John Doe!'));
 
 /**
  * Remove the first and last angle brackets from tag string
@@ -549,8 +480,6 @@ function encodeToRot13(str) {
     return String.fromCharCode(((char.charCodeAt(0) - base + 13) % 26) + base);
   });
 }
-
-// console.log(encodeToRot13('Why did the chicken cross the road?'));
 
 /**
  * Returns playid card id.
